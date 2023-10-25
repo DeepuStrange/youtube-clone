@@ -8,10 +8,6 @@ const Root = ReactDom.createRoot(document.getElementById("root"));
 const Store = configureStore({
   reducer :rootReducer,
   middleware:(getDefaultMiddleware)=>getDefaultMiddleware({
-    // serializableCheck:{
-    //   ignoreActions:["youtube/Videos"],
-    //   ignoreActions:["youtube/selectVIdeo"]
-    // }
     serializableCheck:false
   }),
 })
