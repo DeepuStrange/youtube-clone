@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 function Display(){
     const {selectedVideo} = useSelector((appState)=>appState);
-    // console.log(selectedVideo,"SVV")
     if(selectedVideo.length > 0){
         const URL = `https://www.youtube.com/embed/${selectedVideo[0].id.videoId}`;
     return(

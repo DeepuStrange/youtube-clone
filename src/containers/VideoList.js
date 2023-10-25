@@ -1,10 +1,8 @@
 import { useSelector,useDispatch } from "react-redux";
 import {selectVideo} from "../youTubeSlice/Slice";
-import Display from "./Display";
 function VideoList(){
     const dispatch = useDispatch();
     const {videos,selectedVideo} = useSelector((appState)=>appState)
-    // console.log("VIdeolist",videos,selectedVideo)
     return(
         <div style={{
             display: "flex",
@@ -35,7 +33,6 @@ function VideoList(){
             ) : (
                 <span>Loading.....!</span>
             )}
-            <Display></Display>
         </div>
     )
 }

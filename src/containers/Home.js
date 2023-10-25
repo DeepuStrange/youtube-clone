@@ -1,12 +1,9 @@
 import { useSelector,useDispatch } from "react-redux";
 import VideoList from "./VideoList";
-// import { setTerm } from "../youTubeSlice/Slice";
 import { useState } from "react";
-// import Display from "./Display";
+import Display from "./Display";
 function Home(props){
-    // const dispatch = useDispatch();
     const {videos} = useSelector((appState)=>appState);
-    // console.log(videos,"videos");
     const [state,setState] = useState({
         term:"",
     });
@@ -29,7 +26,6 @@ function Home(props){
             flexDirection:"row",
             justifyItems:"center",
             justifyContent:"flex-start",
-            // justifyContent:"space-evenly"
            }}>
            <input 
            onChange={(event)=>{
@@ -88,6 +84,7 @@ function Home(props){
             }}><i className="material-icons">&#xe439;</i></button>
            </div>
         </div>
+        <Display></Display>
         <VideoList></VideoList>
        </div>
     )

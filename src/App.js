@@ -8,7 +8,6 @@ function App(){
   const dispatch = useDispatch();
   const fetchData = useCallback(async(term)=>{
       const {data} = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyCDWrmPioXtvwNksSZR8IOS1RCtpQ8nCm4&q=${term}&type=video&maxResults=30`);
-      // console.log(data.items[0],"uu");
       dispatch(getVideos(data.items));
       dispatch(selectVideo(data.items[0]))
   },[dispatch]);
