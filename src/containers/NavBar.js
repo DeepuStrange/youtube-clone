@@ -10,7 +10,7 @@ function NavBar(props){
         <div>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <div className="navBar">
-            <img src="https://wallpapers.com/images/hd/youtube-logo-2272-x-1260-background-ybrih3rlwxycir54.jpg" width={100} height={40}></img>
+            <img src="https://wallpapers.com/images/hd/youtube-logo-2272-x-1260-background-ybrih3rlwxycir54.jpg" width={100} height={40} alt="youTubeIcon"></img>
             <div className="search">
             <input id="textId" onChange={(event)=>{
                 setState({

@@ -17,7 +17,7 @@ function App(){
   return(
     <div style={{
       backgroundColor:"black",
-      color:"white"
+      color:"white",
     }}>
       <NavBar onSearch={(searchTerm)=>{
         fetchData(searchTerm)

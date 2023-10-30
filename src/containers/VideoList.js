@@ -2,7 +2,7 @@ import { useSelector,useDispatch } from "react-redux";
 import {selectVideo} from "../youTubeSlice/Slice";
 function VideoList(){
     const dispatch = useDispatch();
-    const {videos,selectedVideo} = useSelector((appState)=>appState)
+    const {videos} = useSelector((appState)=>appState)
     return(
         <div style={{
             display: "flex",
@@ -25,7 +25,7 @@ function VideoList(){
                     }}>
                         <img onClick={(SV)=>{
                             dispatch(selectVideo(Vid))
-                        }} src={Vid.snippet.thumbnails.high.url} style={{objectFit:"cover",width:"auto"}}></img>
+                        }} src={Vid.snippet.thumbnails.high.url} style={{objectFit:"cover",width:"auto"}} alt="img"></img>
                         <span >{Vid.snippet.title}</span>
                     </div>
                     ))
