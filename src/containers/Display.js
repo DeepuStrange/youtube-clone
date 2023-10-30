@@ -4,7 +4,10 @@ function Display(){
     if(selectedVideo.length > 0){
         const URL = `https://www.youtube.com/embed/${selectedVideo[0].id.videoId}`;
     return(
-        <div>
+        <div style={{
+            display:"flex",
+            justifyContent:"center"
+        }}>
             <iframe width="560" height="315" src={URL} ></iframe>
         </div>
     )
