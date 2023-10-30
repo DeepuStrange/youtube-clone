@@ -12,6 +12,7 @@ function App(){
       dispatch(selectVideo(data.items[0]))
   },[dispatch]);
   useEffect(()=>{
+    console.log("hi")
     fetchData("your are there for me");
   },[fetchData])
   return(
