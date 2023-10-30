@@ -24,7 +24,6 @@ function VideoList(){
                         gap: 10,
                     }}>
                         <img onClick={(SV)=>{
-                            // console.log(SV,"SV")
                             dispatch(selectVideo(Vid))
                         }} src={Vid.snippet.thumbnails.high.url} style={{objectFit:"cover",width:"auto"}}></img>
                         <span >{Vid.snippet.title}</span>
